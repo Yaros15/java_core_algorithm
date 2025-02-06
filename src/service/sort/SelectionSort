@@ -12,8 +12,8 @@ public class SelectionSort implements SortingArray{
     @Override
     public Car[] sort(Car[] cars) {
 
-        // В Цикле for перебераем массив -->
-        for (int i = 0; i < cars.length; i++){
+        // В Цикле for перебераем массив минус 1 итерация, так как последний элемент уже стаит там где надо-->
+        for (int i = 0; i < (cars.length - 1); i++){
 
             int indexNextMinValue = i; // Записываем индекс массива = i, как минимальное значение не отсартированного списка
 
