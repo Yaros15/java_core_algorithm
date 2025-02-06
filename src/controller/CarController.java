@@ -32,5 +32,9 @@ public class CarController {
         }
     }
 
+    public void carSearch(int releaseDate){
+        int indexCar = searchArray.search(carRepo.getCars(), releaseDate);
+        System.out.println(carRepo.getCar(indexCar));
+    }
 
 }
