@@ -6,6 +6,8 @@ public class Main {
         CarController carController = new CarController(new SortingByInsertion());
         carController.carSort();
         carController.showSortedCars();
+        System.out.println("Search auto by date 1995");
+        carController.carSearch(1995);
 
     }
 }
