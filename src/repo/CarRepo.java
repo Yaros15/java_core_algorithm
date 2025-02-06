@@ -29,4 +29,12 @@ public class CarRepo {
         cars[indCar] = car;
     }
 
+    public Car getCar(int id){
+        Car car = null;
+        if(id < cars.length) {
+            car = cars[id];
+        }
+        return car;
+    }
+
 }
