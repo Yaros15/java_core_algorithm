@@ -10,15 +10,21 @@ public class CarController {
 
     private CarRepo carRepo;
     private SortingArray sortingArray;
+    private SearchArray searchArray;
     private Car[] sortingCars;
 
-    public CarController(SortingArray sortingArray) {
+    public CarController(SortingArray sortingArray, SearchArray searchArray) {
         this.carRepo = new CarRepo();
         this.sortingArray = sortingArray;
+        this.searchArray = searchArray;
     }
 
     public void setSortingArray(SortingArray sortingArray) {
         this.sortingArray = sortingArray;
+    }
+
+    public void setSearchArray(SearchArray searchArray) {
+        this.searchArray = searchArray;
     }
 
     public void carSort(){
