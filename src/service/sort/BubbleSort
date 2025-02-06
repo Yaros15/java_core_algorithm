@@ -1,0 +1,40 @@
+package service.sort;
+
+import model.Car;
+
+public class BubbleSort implements SortingArray{
+
+    /*
+    * Сравниваем все элементы подряд, меняя их при необходимости
+    */
+
+    @Override
+    public Car[] sort(Car[] cars) {
+        
+        boolean sorted = false;
+        
+        while (!sorted){
+            
+            sorted = true;
+            
+            for (int i = 0; i < (cars.length - 1); i++){
+                
+                if(cars[i].getReleaseDate() > cars[i+1].getReleaseDate()){
+
+                    // Записываем в временную переменную элемент массива под индексом i
+                    Car temporaryVariableCar = cars[i];
+                    // Перезаписываем значение в массиве под индексом i - на значение элемента под индексом i+1
+                    cars[i] = cars[i+1];
+                    // Перезаписываем значение элемента под индексом i+1 - на значение хранящееся в временной переменной temporaryVariableCar
+                    cars[i+1] = temporaryVariableCar;
+                    
+                    sorted = false;
+                }
+                
+            }
+                    
+        }
+        
+        return new Car[0];
+    }
+}
