@@ -35,6 +35,6 @@ public class BubbleSort implements SortingArray{
                     
         }
         
-        return new Car[0];
+        return cars; // Возвращаем отсартированый массив
     }
 }
