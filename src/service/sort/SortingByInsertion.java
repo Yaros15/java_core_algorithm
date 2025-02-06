@@ -2,7 +2,12 @@ package service.sort;
 
 import model.Car;
 
-public class SortingByInsertion implements SortingArray{
+public class InsertionSort implements SortingArray{
+
+    /*
+    * По умолчанию считаем что левая часть массива состоящая из первого элемента массива - уже отсартирована
+    * Берем первый элемент не отсартированой(правой) части массива, и ищем куда его вставить в левую отсартированую часть массива
+    */
 
     // Сортировка вставкой -->
     @Override
